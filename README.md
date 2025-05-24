@@ -67,3 +67,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Project Members 
 - Student ID: 6398431
 - Student ID: 6378554
+
+## UML Diagram 
+We added a set of UML class diagrams and explanations for the following CHMS subsystems : Alert Generation, Data Storage
+Patient Identification, and Data Access Layer.
+[uml_models](./plantuml.pdf)

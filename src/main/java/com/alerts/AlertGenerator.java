@@ -12,6 +12,7 @@ import com.data_management.Patient;
 public class AlertGenerator {
     private DataStorage dataStorage;
 
+
     /**
      * Constructs an {@code AlertGenerator} with a specified {@code DataStorage}.
      * The {@code DataStorage} is used to retrieve patient data that this class
@@ -22,6 +23,7 @@ public class AlertGenerator {
      */
     public AlertGenerator(DataStorage dataStorage) {
         this.dataStorage = dataStorage;
+
     }
 
     /**
