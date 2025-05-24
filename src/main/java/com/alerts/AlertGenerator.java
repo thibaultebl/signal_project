@@ -5,8 +5,8 @@ import com.data_management.Patient;
 
 /**
  * The {@code AlertGenerator} class is responsible for monitoring patient data
- * and generating alerts when certain predefined conditions are met. This class
- * relies on a {@link DataStorage} instance to access patient data and evaluate
+ * and generating alerts when certain predefined conditions are met.
+ * This class relies on a {@link DataStorage} instance to access patient data and evaluate
  * it against specific health criteria.
  */
 public class AlertGenerator {
@@ -18,7 +18,7 @@ public class AlertGenerator {
      * will monitor and evaluate.
      *
      * @param dataStorage the data storage system that provides access to patient
-     *                    data
+     * data
      */
     public AlertGenerator(DataStorage dataStorage) {
         this.dataStorage = dataStorage;
