@@ -1,7 +1,0 @@
-alerts\StrategyPatternTest.class
-data_management\DataStorageTest.class
-data_management\FileDataReaderTest.class
-data_management\PatientTest.class
-alerts\AlertGeneratorTest.class
-alerts\FactoryPatternTest.class
-data_management\MockDataReader.class

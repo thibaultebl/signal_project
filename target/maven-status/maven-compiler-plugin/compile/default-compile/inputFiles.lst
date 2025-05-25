@@ -10,6 +10,7 @@ C:\Users\Windows 11\Documents\signal_project\src\main\java\com\alerts\HeartRateS
 C:\Users\Windows 11\Documents\signal_project\src\main\java\com\alerts\OxygenAlertFactory.java
 C:\Users\Windows 11\Documents\signal_project\src\main\java\com\alerts\OxygenSaturationStrategy.java
 C:\Users\Windows 11\Documents\signal_project\src\main\java\com\alerts\PriorityAlertDecorator.java
+C:\Users\Windows 11\Documents\signal_project\src\main\java\com\alerts\RepeatedAlertDecorator.java
 C:\Users\Windows 11\Documents\signal_project\src\main\java\com\cardio_generator\generators\AlertGenerator.java
 C:\Users\Windows 11\Documents\signal_project\src\main\java\com\cardio_generator\generators\BloodLevelsDataGenerator.java
 C:\Users\Windows 11\Documents\signal_project\src\main\java\com\cardio_generator\generators\BloodPressureDataGenerator.java
