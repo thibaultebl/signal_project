@@ -21,6 +21,7 @@ com\alerts\AlertGenerator.class
 com\alerts\BloodPressureStrategy.class
 com\alerts\OxygenAlertFactory.class
 com\alerts\BloodPressureAlertFactory.class
+com\alerts\RepeatedAlertDecorator.class
 com\cardio_generator\outputs\FileOutputStrategy.class
 com\data_management\FileDataReader.class
 com\alerts\AlertFactory.class

@@ -2,34 +2,32 @@ package data_management;
 
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
-import com.data_management.Patient;
 import com.data_management.PatientRecord;
 import com.data_management.DataStorage;
 import com.data_management.FileDataReader;
-import java.util.List;
+
 import java.io.BufferedWriter;
 import java.io.FileWriter;
+import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.List;
-
-
-
 
 class FileDataReaderTest {
 
     @Test
     void testReadFromSimpleFileAtProjectRoot() throws Exception {
-        // Define the output path: create test_data_file.txt at the root of the project
-        String fileName = "test_data_file.txt";
+        // Create a temp directory for the test
+        Path tempDir = Files.createTempDirectory("test_data_dir");
+        String fileName = tempDir.resolve("test_data_file.txt").toString();
 
-        // Write test content into the file
+        // Write test data
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileName))) {
             writer.write("1;1714376789050;HeartRate;85.0\n");
             writer.write("1;1714376789051;Systolic;120.0\n");
         }
 
-        // Read using FileDataReader (looking at the project root folder)
-        FileDataReader reader = new FileDataReader(".");
+        // Use FileDataReader with the temp directory
+        FileDataReader reader = new FileDataReader(tempDir.toString());
         DataStorage storage = DataStorage.getInstance(); 
         reader.readData(storage);
 
