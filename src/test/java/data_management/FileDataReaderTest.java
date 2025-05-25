@@ -30,7 +30,7 @@ class FileDataReaderTest {
 
         // Read using FileDataReader (looking at the project root folder)
         FileDataReader reader = new FileDataReader(".");
-        DataStorage storage = new DataStorage();
+        DataStorage storage = DataStorage.getInstance(); 
         reader.readData(storage);
 
         // Validate the content

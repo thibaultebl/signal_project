@@ -17,7 +17,7 @@ class AlertGeneratorTest {
     @Test
     void testCriticalSystolicTriggersAlert() {
         // Create a DataStorage and a patient with high systolic pressure
-        DataStorage storage = new DataStorage();
+        DataStorage storage = DataStorage.getInstance(); 
         int patientId = 1;
         storage.addPatientData(patientId, 190.0, "Systolic", System.currentTimeMillis());
 
@@ -42,7 +42,7 @@ class AlertGeneratorTest {
 
     @Test
     void testLowSaturationTriggersAlert() {
-        DataStorage storage = new DataStorage();
+        DataStorage storage = DataStorage.getInstance();
         int patientId = 2;
         storage.addPatientData(patientId, 90.0, "Saturation", System.currentTimeMillis());
 

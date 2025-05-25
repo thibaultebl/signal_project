@@ -9,7 +9,6 @@ com\cardio_generator\outputs\WebSocketOutputStrategy$SimpleWebSocketServer.class
 com\data_management\DataReader.class
 com\alerts\OxygenSaturationStrategy.class
 com\cardio_generator\generators\BloodSaturationDataGenerator.class
-.DS_Store
 com\cardio_generator\generators\ECGDataGenerator.class
 com\cardio_generator\outputs\OutputStrategy.class
 com\alerts\PriorityAlertDecorator.class
@@ -26,9 +25,7 @@ com\cardio_generator\outputs\FileOutputStrategy.class
 com\data_management\FileDataReader.class
 com\alerts\AlertFactory.class
 com\cardio_generator\generators\BloodPressureDataGenerator.class
-com\cardio_generator\.DS_Store
 com\cardio_generator\generators\PatientDataGenerator.class
 com\data_management\PatientRecord.class
-com\.DS_Store
 com\alerts\HeartRateStrategy.class
 com\data_management\Patient.class

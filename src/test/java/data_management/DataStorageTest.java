@@ -13,7 +13,7 @@ class DataStorageTest {
     @Test
     void testAddAndGetRecords() {
         // Create a new DataStorage instance
-        DataStorage storage = new DataStorage();
+        DataStorage storage = DataStorage.getInstance(); 
 
         // Add two records for the same patient with close timestamps
         storage.addPatientData(1, 100.0, "WhiteBloodCells", 1714376789050L);
