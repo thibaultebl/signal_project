@@ -22,8 +22,10 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 
-
-
+/*
+Main class to simulate health data from multiples virtual patients.
+Supports various data generators and multiple output strategies.
+ */
 
 public class HealthDataSimulator {
 
@@ -32,6 +34,12 @@ public class HealthDataSimulator {
     private static OutputStrategy outputStrategy = new ConsoleOutputStrategy(); // Default output strategy
     private static final Random random = new Random();
 
+
+    /**
+     Entry point of the app
+     @param args is a command line argument for the  configuration
+     @throws IOException if the creation of the output file fail
+     */
     public static void main(String[] args) throws IOException {
 
         parseArguments(args);
@@ -44,6 +52,11 @@ public class HealthDataSimulator {
         scheduleTasksForPatients(patientIds);
     }
 
+    /**
+     * Get the command line arguments and updates the configuration parameters
+     * @param args args the command line arguments
+     * @throws IOException if a directory for a file has to be created
+     */
     private static void parseArguments(String[] args) throws IOException {
         for (int i = 0; i < args.length; i++) {
             switch (args[i]) {
@@ -122,6 +135,11 @@ public class HealthDataSimulator {
                 "  This command simulates data for 100 patients and sends the output to WebSocket clients connected to port 8080.");
     }
 
+    /**
+     * Build a list of patient linked to an ID based on the patient count
+     * @param patientCount Number of patients to simulate
+     * @returnA list of patient ID, without repetition.
+     */
     private static List<Integer> initializePatientIds(int patientCount) {
         List<Integer> patientIds = new ArrayList<>();
         for (int i = 1; i <= patientCount; i++) {
@@ -130,6 +148,10 @@ public class HealthDataSimulator {
         return patientIds;
     }
 
+    /**
+     * Plan periodically some task for each patient
+     * @param patientIds List of patient IDs to plan tasks for
+     */
     private static void scheduleTasksForPatients(List<Integer> patientIds) {
         ECGDataGenerator ecgDataGenerator = new ECGDataGenerator(patientCount);
         BloodSaturationDataGenerator bloodSaturationDataGenerator = new BloodSaturationDataGenerator(patientCount);
@@ -146,6 +168,12 @@ public class HealthDataSimulator {
         }
     }
 
+    /**
+     * Plan a periodic task using the planner
+     * @param task the task to be planned
+     * @param period the interval between last and next executions.
+     * @param timeUnit the time unit of the period
+     */
     private static void scheduleTask(Runnable task, long period, TimeUnit timeUnit) {
         scheduler.scheduleAtFixedRate(task, random.nextInt(5), period, timeUnit);
     }
