@@ -1,5 +1,6 @@
 package com.cardio_generator.outputs;
 
+
 import org.java_websocket.WebSocket;
 import org.java_websocket.server.WebSocketServer;
 
@@ -52,7 +53,6 @@ public class WebSocketOutputStrategy implements OutputStrategy {
 
         @Override
         public void onStart() {
-            System.out.println("Server started successfully");
         }
     }
 }

@@ -13,7 +13,7 @@ import java.util.concurrent.ConcurrentHashMap;
 public class FileOutputStrategy implements OutputStrategy {
     // Changed variable name to camelCase
     private String baseDirectory;
-    // Camelcase instead of the snake_case
+    // Camelcase instead of the underscore
     public final ConcurrentHashMap<String, String> fileMap = new ConcurrentHashMap<>();
 
     public FileOutputStrategy(String baseDirectory) {
