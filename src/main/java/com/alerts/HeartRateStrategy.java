@@ -27,7 +27,7 @@ public class HeartRateStrategy implements AlertStrategy {
                             break;
                         }
                     }
-                    ecgWindow.clear();
+                    ecgWindow.remove(0); // gliding window
                 }
             }
         }

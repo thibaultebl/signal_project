@@ -1,2 +1,7 @@
-/Users/thibaultebl/Desktop/University/signal_project/src/test/java/data_management/DataStorageTest.java
-/Users/thibaultebl/Desktop/University/signal_project/src/test/java/data_management/MockDataReader.java
+C:\Users\Windows 11\Documents\signal_project\src\test\java\alerts\AlertGeneratorTest.java
+C:\Users\Windows 11\Documents\signal_project\src\test\java\alerts\FactoryPatternTest.java
+C:\Users\Windows 11\Documents\signal_project\src\test\java\alerts\StrategyPatternTest.java
+C:\Users\Windows 11\Documents\signal_project\src\test\java\data_management\DataStorageTest.java
+C:\Users\Windows 11\Documents\signal_project\src\test\java\data_management\FileDataReaderTest.java
+C:\Users\Windows 11\Documents\signal_project\src\test\java\data_management\MockDataReader.java
+C:\Users\Windows 11\Documents\signal_project\src\test\java\data_management\PatientTest.java
